@@ -6,12 +6,12 @@
 # $FILENAME - the file to put it into
 #
 
-if [ -z "VALUE" ]; then
+if [ -z $VALUE ]; then
     echo "Need to set VALUE"
     exit 1
 fi
 
-if [ -z "FILENAME" ]; then
+if [ -z $FILENAME ]; then
     echo "Need to set FILENAME"
     exit 1
 fi
