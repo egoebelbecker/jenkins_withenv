@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('WithEnv Script') {
+            steps {
+                withEnv(['VALUE=foo!', 'FILENAME=foofile']) {
+                    sh 'cd script;./build.sh'
+                }
+            }
+        }
+    }
+}
