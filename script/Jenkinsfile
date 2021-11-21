@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('WithEnv Script') {
             steps {
-                withEnv(['VALUE=foo!', 'FILENAME=foofile']) {
+                withEnv(['VALUE=foo!']) {
                     sh 'cd script;./build.sh'
                 }
             }
